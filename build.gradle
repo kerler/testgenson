@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+version = '0.1.1-SNAPSHOT'
+group = 'com.github.kerler'
+
+repositories {
+    mavenCentral()
+    flatDir name: 'localRepository1', dirs: "${rootProject.projectDir}/testlibs"
+}
+
+dependencies {
+    testCompile("com.owlike:genson:1.4") //Genson for object-json mapping. Used in spring-data-gremlin-core.
+
+    testCompile("org.apache.xmlbeans:xmlbeans:2.3.0") //Latest Release: Apache XMLBeans 2.6.0 (August 14, 2012)
+    testCompile("javax.measure:jsr-275:0.9.4") //http://mvnrepository.com/artifact/javax.measure/jsr-275 Latest Release: 0.9.4 release (2010)
+    testCompile("jdom:jdom:1.0") //http://mvnrepository.com/artifact/jdom/jdom Latest release 1.1
+    testCompile("joda-time:joda-time:2.2") //http://mvnrepository.com/artifact/joda-time, Latest release 2.7
+
+    testCompile("openehr:openehr-rm-core:1.0.5-SNAPSHOT")
+    testCompile("openehr:openehr-rm-domain:1.0.5-SNAPSHOT")
+    testCompile("openehr:openehr-aom:1.0.5-SNAPSHOT")
+
+    testCompile("openehr:rm-builder:1.0.5-SNAPSHOT")
+    testCompile("openehr:adl-parser:1.0.5-SNAPSHOT")
+    testCompile("openehr:openehr-ap:1.0.5-SNAPSHOT")
+    testCompile("openehr:rm-skeleton:1.0.5-SNAPSHOT")
+    testCompile("openehr:oet-parser:1.0.5-SNAPSHOT")
+    testCompile("openehr:measure-serv:1.0.5-SNAPSHOT")
+    testCompile("openehr:mini-termserv:1.0.5-SNAPSHOT")
+    testCompile("openehr:xml-binding:1.0.5-SNAPSHOT")
+    testCompile("openehr:rm-validator:1.0.2-SNAPSHOT")
+    testCompile("org.unitils:unitils-core:3.4.2")
+
+    testCompile('junit:junit:4.12')
+}
+
+
+

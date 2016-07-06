@@ -1,0 +1,10 @@
+/**/build/
+/**/bin/
+/**/.gradle/
+/**/.idea/
+/**/.zip
+/**/.settings/
+/**/.classpath
+/**/.project
+/**/.springBeans
+/**/*.log
